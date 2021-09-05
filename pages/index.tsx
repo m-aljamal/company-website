@@ -1,18 +1,16 @@
-import { heroText } from "src/text/homePage/arabic";
+import { useRouter } from "next/router";
+import Hero from "src/components/home/Hero";
+import OurOffer from "src/components/home/OurOffer";
 
 export default function Home() {
+  const router = useRouter();
+
+  const { locale } = router;
   return (
-    <div className="bg-darkBlue pb-8">
-      <div className="container pt-28  flex justify-center gap-60">
-        <div className="w-3/12">
-          <p className=" text-liteGreen text-sm">{heroText.subTitle}</p>
-          <h1 className="text-white font-bold text-2xl mt-2">
-            {heroText.mainTitle}
-          </h1>
-          <p className="text-white mt-6">{heroText.body}</p>
-        </div>
-        <div className="bg-gray-300">code typing</div>
-      </div>
-    </div>
+    <>
+      <Hero locale={locale} />
+      <OurOffer locale={locale} />
+    </>
   );
 }
+

@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Tajawal"],
+        eng: ["Roboto"],
       },
       colors: {
         darkBlue: "#012A4A",

@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import LocaleSwitcher from "src/components/locale-switcher";
 const links = [
   {
     arabicText: "الرئيسية",
+
     link: "/",
   },
   {
@@ -21,15 +23,19 @@ const links = [
 
 export default function Navbar() {
   const router = useRouter();
+  const { locale } = router;
 
   return (
-    <div className="container absolute">
-      <div className="flex py-5">
-        <div className="w-2/6">logo</div>
+    <div
+      className="container absolute left-0 right-0"
+      style={{ direction: `rtl` }}
+    >
+      <div className="md:flex py-5 justify-between hidden ">
+        <div className=" text-white">logo</div>
         <nav>
           <ul className="flex gap-24">
             {links.map((l) => (
-              <Link href={l.link}>
+              <Link href={l.link} key={l.link}>
                 <li
                   className={`font-medium cursor-pointer ${
                     router.pathname === l.link ? "text-liteBlue" : "text-white"
@@ -41,6 +47,9 @@ export default function Navbar() {
             ))}
           </ul>
         </nav>
+        <div>
+          <LocaleSwitcher />
+        </div>
       </div>
     </div>
   );
