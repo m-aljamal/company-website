@@ -1,6 +1,6 @@
 import { ourOfferText } from "src/text/homePage";
-import CheckSvg from "./CheckSvg";
-import SvgCode from "./SvgCode";
+import CheckSvg from "./svg/CheckSvg";
+import SvgCode from "./svg/SvgCode";
 
 export default function OurOffer({ locale }) {
   const { title, body, services } = ourOfferText[locale];
