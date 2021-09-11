@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <div
-      className="container absolute left-0 right-0"
+      className="container absolute left-0 right-0 top-0 z-30"
       style={{ direction: `rtl` }}
     >
       <div className="md:flex py-5 justify-between hidden ">
@@ -37,7 +37,7 @@ export default function Navbar() {
             {links.map((l) => (
               <Link href={l.link} key={l.link}>
                 <li
-                  className={`font-medium cursor-pointer ${
+                  className={`font-bold cursor-pointer ${
                     router.pathname === l.link ? "text-liteBlue" : "text-white"
                   }`}
                 >
