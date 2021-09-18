@@ -1,8 +1,8 @@
- 
+import Banner from "src/components/Banner";
 export default function projects() {
-    return (
-        <div>
-            projects
-        </div>
-    )
+  return (
+    <div>
+      <Banner text="مشاريعنا" />
+    </div>
+  );
 }

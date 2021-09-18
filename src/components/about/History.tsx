@@ -7,7 +7,7 @@ export default function History() {
         <Image src="/images/disc.jpg" layout="fill" objectFit="cover" />
       </div>
       <div className="w-2/5 transform -translate-x-6 relative ">
-        <div className="bg-SecDarkBlue text-center mr-20 p-5 rounded-md">
+        <div className="bg-SecDarkBlue text-center mr-20 p-5 rounded-tr-md rounded-tl-md">
           <h2 className=" text-liteGreen text-lg">تاريخنا</h2>
           <h2 className="text-liteBlue mt-2 text-xl">
             لمحة عن تاريخنا في مجال البرمجة
