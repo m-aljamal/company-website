@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { customerText } from "src/text/homePage";
 import Image from "next/image";
 export default function WhatTheySay({ locale }) {

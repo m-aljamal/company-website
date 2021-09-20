@@ -4,7 +4,7 @@ import Heading from "../Heading";
 import Icon from "../Icon";
 import Image from "next/image";
 export default function BusinessValues() {
-  const { title, values } = businessValues["ar"];
+  const { title, values, team, teamBody } = businessValues["ar"];
 
   return (
     <div className="py-8  bg-darkBlue container">
@@ -19,11 +19,8 @@ export default function BusinessValues() {
         <TeamtMember />
         <TeamtMember />
         <div className="bg-SecDarkBlue p-3 rounded-md">
-          <h2 className="text-liteGreen text-lg text-center">فريق عملنا</h2>
-          <p className="text-right text-crame">
-            فريق عملنا دائما جاهز وعلى تواصل دائم مع الزبائن والعملاء من اجل
-            تطوير خدماتنا
-          </p>
+          <h2 className="text-liteGreen text-lg text-center">{team}</h2>
+          <p className="text-right text-crame">{teamBody}</p>
         </div>
       </div>
     </div>
